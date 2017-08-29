@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+require 'contest_toy_robot'
+require 'rdoba'
+
+rdoba_log = {}
+rdoba_log[:functions] = :basic if ARGV[0] == '-v'
+rdoba log: rdoba_log
+
+robot = ContestToyRobot::Robot.new
+
+$stdin.readlines.each do |l|
+   log > l.chomp
+   robot.do(l)
+end

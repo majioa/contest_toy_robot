@@ -2,27 +2,49 @@
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/contest_toy_robot`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
-
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'contest_toy_robot'
+gem 'contest_toy_robot', github: 'majioa/contest_toy_robot'
 ```
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
+Or use it yourself previously cloned with git:
 
-    $ gem install contest_toy_robot
+    $ git clone https://github.com/majioa/contest_toy_robot.git
 
 ## Usage
 
-TODO: Write usage instructions here
+Use gem's binary by passing command list to standard input like follows:
+
+    $ bundle exec toyrobot <<< "PLACE 0,0,NORTH
+    MOVE
+    REPORT
+    "
+    0,1,NORTH
+
+You are able to to see which commands are executed by passing '-v' as an argument:
+
+    $ bundle exec toyrobot -v <<< "PLACE 0,0,NORTH
+    MOVE
+    REPORT
+    "
+    > PLACE 0,0,NORTH
+    > MOVE
+    > REPORT
+    0,1,NORTH
+
+Also you can use predefned test samples data as follows:
+
+    $ cat SAMPLES | bundle exec toyrobot
+    0,1,NORTH
+    0,0,WEST
+    3,3,NORTH
 
 ## Development
 
@@ -30,6 +52,12 @@ After checking out the repo, run `bin/setup` to install dependencies. Then, run 
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
+## Test
+
+Run specs as follows:
+
+    $ bundle exec rake spec
+
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/contest_toy_robot.
+Bug reports and pull requests are welcome on GitHub at https://github.com/majioa/contest_toy_robot.
