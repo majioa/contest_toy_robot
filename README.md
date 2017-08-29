@@ -10,13 +10,13 @@ Add this line to your application's Gemfile:
 gem 'contest_toy_robot', github: 'majioa/contest_toy_robot'
 ```
 
-And then execute:
-
-    $ bundle
-
 Or use it yourself previously cloned with git:
 
     $ git clone https://github.com/majioa/contest_toy_robot.git
+
+And then execute:
+
+    $ bundle
 
 ## Usage
 
@@ -52,7 +52,7 @@ After checking out the repo, run `bin/setup` to install dependencies. Then, run 
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
-## Test
+## Test
 
 Run specs as follows:
 
